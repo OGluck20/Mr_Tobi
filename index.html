@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
 </head>
-<body>
+<body style="max-width: 100vw;">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
@@ -27,6 +28,8 @@
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#featured_books">Books</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -50,7 +53,7 @@
                     <img src="members/1600w-B-cRyoh7b98.webp" alt="CEO" class="img-fluid rounded-circle">
                 </div>
                 <div class="col-md-6" data-aos="fade-left">
-                    <h2>Meet Our CEO</h2>
+                    <h2 class="CEO-hdr">Meet Our CEO</h2>
                     <h3>John Doe</h3>
                     <p class="position">Founder & Chief Executive Officer</p>
                     <p class="bio">With over 15 years of experience in educational consulting, John has helped thousands of students achieve their academic goals.</p>
@@ -221,6 +224,60 @@
         </div>
     </section>
 
+<!-- Blog Section -->
+<section id="blog" class="blog-section py-5">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Latest Blog Posts</h2>
+        <div class="row">
+            <!-- Blog Post 1 -->
+            <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+                <div class="blog-card">
+                    <img src="members/_119626280_bbc.jpg.webp" alt="Understanding JAMB Registration" class="img-fluid">
+                    <div class="blog-content">
+                        <h3>Understanding JAMB Registration</h3>
+                        <p class="timestamp">Posted on: <span>March 10, 2024</span></p>
+                        <p>Learn everything you need to know about the JAMB registration process, including tips and deadlines.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Blog Post 2 -->
+            <div class="col-md-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <h3>Top Study Tips for WAEC</h3>
+                        <p class="timestamp">Posted on: <span>March 12, 2024</span></p>
+                        <p>Discover effective study strategies to excel in your WAEC exams and achieve your academic goals.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Blog Post 3 -->
+            <div class="col-md-12" data-aos="fade-up" data-aos-delay="300">
+                <div class="blog-card">
+                    <img src="members/businessman-choosing-which-path-he-should-go_24381-2235.avif" alt="Choosing the Right Course" class="img-fluid">
+                    <div class="blog-content">
+                        <h3>Choosing the Right Course</h3>
+                        <p class="timestamp">Posted on: <span>March 15, 2024</span></p>
+                        <p>Get insights on how to select the best courses for your future career and academic success.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Update blog section trigger button -->
+    <section id="blog" class="py-5">
+        <div class="container">
+            <div class="text-center">
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#blogListModal">
+                    View All Blog Posts
+                </button>
+            </div>
+        </div>
+        </section>
+</section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
@@ -252,6 +309,151 @@
         </div>
     </section>
 
+    <!-- Featured Books Section -->
+    <section id="featured-books" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Featured Books</h2>
+            <div class="row">
+                <!-- Book Card 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="members/book-covers-big-2019101610.jpg" class="card-img-top" alt="Book 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Book Title 1</h5>
+                            <p class="card-text">Brief description of the book...</p>
+                            <a href="path/to/book1.pdf" class="btn btn-primary" download>Download</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Book Card 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="members/minimalist-poetry-book-cover_23-2149574251.avif" class="card-img-top" alt="Book 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Book Title 2</h5>
+                            <p class="card-text">Brief description of the book...</p>
+                            <a href="path/to/book2.pdf" class="btn btn-primary" download>Download</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Book Card 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="members/images.jpg" class="card-img-top" alt="Book 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Book Title 3</h5>
+                            <p class="card-text">Brief description of the book...</p>
+                            <a href="path/to/book3.pdf" class="btn btn-primary" download>Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="books.html" class="btn btn-secondary">Show More Books</a>
+            </div>
+        </div>
+    </section>
+
+        <!-- Blog Modal -->
+        <div class="modal fade" id="blogListModal" tabindex="-1" aria-labelledby="blogListModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="blogListModalLabel">Latest Blog Posts</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <!-- Blog Post 1 -->
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <img src="members/Trends-in-Educational-Technology.jpg" class="card-img-top" alt="Blog 1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Educational Technology Trends</h5>
+                                        <p class="card-text">Exploring the latest trends in educational technology...</p>
+                                        <small class="text-muted">Posted: January 15, 2024</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Blog Post 2 -->
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <img src="members/images.png" class="card-img-top" alt="Blog 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Study Tips for Students</h5>
+                                        <p class="card-text">Essential study tips for academic success...</p>
+                                        <small class="text-muted">Posted: January 10, 2024</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        
+        
+            <!-- Add this modal at the bottom of the body, before the scripts -->
+            <div class="modal fade" id="groupsModal" tabindex="-1" aria-labelledby="groupsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="groupsModalLabel">All Available Study Groups</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <!-- Additional Group 1 -->
+                                <div class="col-md-6 mb-4">
+                                    <div class="group-card">
+                                        <div class="group-header">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            <h3>LASU Aspirants</h3>
+                                            <div class="price">
+                                                <span class="amount">₦5,500</span>
+                                                <span class="period">/year</span>
+                                            </div>
+                                        </div>
+                                        <div class="group-features">
+                                            <ul>
+                                                <li><i class="fas fa-check"></i> Admission Guidelines</li>
+                                                <li><i class="fas fa-check"></i> Study Materials</li>
+                                                <li><i class="fas fa-check"></i> Mock Tests</li>
+                                            </ul>
+                                        </div>
+                                        <button class="join-btn">Join Now</button>
+                                    </div>
+                                </div>
+                                <!-- Additional Group 2 -->
+                                <div class="col-md-6 mb-4">
+                                    <div class="group-card">
+                                        <div class="group-header">
+                                            <i class="fas fa-book"></i>
+                                            <h3>NECO Group</h3>
+                                            <div class="price">
+                                                <span class="amount">₦4,500</span>
+                                                <span class="period">/year</span>
+                                            </div>
+                                        </div>
+                                        <div class="group-features">
+                                            <ul>
+                                                <li><i class="fas fa-check"></i> Past Questions</li>
+                                                <li><i class="fas fa-check"></i> Daily Practice</li>
+                                                <li><i class="fas fa-check"></i> Expert Support</li>
+                                            </ul>
+                                        </div>
+                                        <button class="join-btn">Join Now</button>
+                                    </div>
+                                </div>
+                                <!-- Add more groups as needed -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -272,65 +474,6 @@
             once: true
         });
     </script>
-
-    <!-- Add this modal at the bottom of the body, before the scripts -->
-    <div class="modal fade" id="groupsModal" tabindex="-1" aria-labelledby="groupsModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="groupsModalLabel">All Available Study Groups</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <!-- Additional Group 1 -->
-                        <div class="col-md-6 mb-4">
-                            <div class="group-card">
-                                <div class="group-header">
-                                    <i class="fas fa-graduation-cap"></i>
-                                    <h3>LASU Aspirants</h3>
-                                    <div class="price">
-                                        <span class="amount">₦5,500</span>
-                                        <span class="period">/year</span>
-                                    </div>
-                                </div>
-                                <div class="group-features">
-                                    <ul>
-                                        <li><i class="fas fa-check"></i> Admission Guidelines</li>
-                                        <li><i class="fas fa-check"></i> Study Materials</li>
-                                        <li><i class="fas fa-check"></i> Mock Tests</li>
-                                    </ul>
-                                </div>
-                                <button class="join-btn">Join Now</button>
-                            </div>
-                        </div>
-                        <!-- Additional Group 2 -->
-                        <div class="col-md-6 mb-4">
-                            <div class="group-card">
-                                <div class="group-header">
-                                    <i class="fas fa-book"></i>
-                                    <h3>NECO Group</h3>
-                                    <div class="price">
-                                        <span class="amount">₦4,500</span>
-                                        <span class="period">/year</span>
-                                    </div>
-                                </div>
-                                <div class="group-features">
-                                    <ul>
-                                        <li><i class="fas fa-check"></i> Past Questions</li>
-                                        <li><i class="fas fa-check"></i> Daily Practice</li>
-                                        <li><i class="fas fa-check"></i> Expert Support</li>
-                                    </ul>
-                                </div>
-                                <button class="join-btn">Join Now</button>
-                            </div>
-                        </div>
-                        <!-- Add more groups as needed -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="script.js"></script>
 </body>
