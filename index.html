@@ -3,15 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educational Consultant</title>
-    <!-- Bootstrap CSS -->
+    <title>EduConsult</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
 </head>
 <body style="max-width: 100vw;">
@@ -228,54 +222,10 @@
 <section id="blog" class="blog-section py-5">
     <div class="container">
         <h2 class="section-title" data-aos="fade-up">Latest Blog Posts</h2>
-        <div class="row">
-            <!-- Blog Post 1 -->
-            <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
-                <div class="blog-card">
-                    <img src="members/_119626280_bbc.jpg.webp" alt="Understanding JAMB Registration" class="img-fluid">
-                    <div class="blog-content">
-                        <h3>Understanding JAMB Registration</h3>
-                        <p class="timestamp">Posted on: <span>March 10, 2024</span></p>
-                        <p>Learn everything you need to know about the JAMB registration process, including tips and deadlines.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Blog Post 2 -->
-            <div class="col-md-12" data-aos="fade-up" data-aos-delay="200">
-                <div class="blog-card">
-                    <div class="blog-content">
-                        <h3>Top Study Tips for WAEC</h3>
-                        <p class="timestamp">Posted on: <span>March 12, 2024</span></p>
-                        <p>Discover effective study strategies to excel in your WAEC exams and achieve your academic goals.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Blog Post 3 -->
-            <div class="col-md-12" data-aos="fade-up" data-aos-delay="300">
-                <div class="blog-card">
-                    <img src="members/businessman-choosing-which-path-he-should-go_24381-2235.avif" alt="Choosing the Right Course" class="img-fluid">
-                    <div class="blog-content">
-                        <h3>Choosing the Right Course</h3>
-                        <p class="timestamp">Posted on: <span>March 15, 2024</span></p>
-                        <p>Get insights on how to select the best courses for your future career and academic success.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-            </div>
+        <div class="row" id="blogPosts">
+            <!-- Posts will be loaded here -->
         </div>
     </div>
-    <!-- Update blog section trigger button -->
-    <section id="blog" class="py-5">
-        <div class="container">
-            <div class="text-center">
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#blogListModal">
-                    View All Blog Posts
-                </button>
-            </div>
-        </div>
-        </section>
 </section>
 
     <!-- Contact Section -->
@@ -470,11 +420,13 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 1000,
-            once: true
+            duration: 800,
+            once: true,
+            offset: 100
         });
     </script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

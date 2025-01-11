@@ -44,6 +44,7 @@ body {
 .nav-link::after {
     content: '';
     position: absolute;
+    text-decoration: none;
     bottom: -5px;
     left: 0;
     width: 0;
