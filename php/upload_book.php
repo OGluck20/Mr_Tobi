@@ -18,14 +18,14 @@ $description = $_POST['bookDescription'];
 $cover_image = $_FILES['bookCover']['name'];
 $file_path = $_FILES['bookFile']['name'];
 
-// Ensure uploads directory exists
-if (!is_dir('uploads')) {
-    mkdir('uploads', 0777, true);
+// Ensure Book_uploads directory exists
+if (!is_dir('Book_uploads')) {
+    mkdir('Book_uploads', 0777, true);
 }
 
 // Upload files
-$cover_image_path = "uploads/" . basename($cover_image);
-$file_path_path = "uploads/" . basename($file_path);
+$cover_image_path = "Book_uploads/" . basename($cover_image);
+$file_path_path = "Book_uploads/" . basename($file_path);
 
 if (move_uploaded_file($_FILES['bookCover']['tmp_name'], $cover_image_path) && move_uploaded_file($_FILES['bookFile']['tmp_name'], $file_path_path)) {
     // Insert into database
@@ -40,7 +40,7 @@ if (move_uploaded_file($_FILES['bookCover']['tmp_name'], $cover_image_path) && m
                         title: 'Success',
                         text: 'New book added successfully'
                     }).then(() => {
-                        window.location.href = 'admin.html';
+                        window.location.href = '../admin.html';
                     });
                 });
               </script>";
@@ -53,7 +53,7 @@ if (move_uploaded_file($_FILES['bookCover']['tmp_name'], $cover_image_path) && m
                         title: 'Error',
                         text: 'Error: " . $sql . "<br>" . $conn->error . "'
                     }).then(() => {
-                        window.location.href = 'admin.html';
+                        window.location.href = '../admin.html';
                     });
                 });
               </script>";
@@ -67,7 +67,7 @@ if (move_uploaded_file($_FILES['bookCover']['tmp_name'], $cover_image_path) && m
                     title: 'Error',
                     text: 'Failed to upload files'
                 }).then(() => {
-                    window.location.href = 'admin.html';
+                    window.location.href = '../admin.html';
                 });
             });
           </script>";

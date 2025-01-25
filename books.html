@@ -148,44 +148,16 @@
 </head>
 <body>
     <header data-aos="fade-down">
-        <!-- <h1>Book Collection</h1> -->
+        <h1>Book Collection</h1>
         <a href="index.html" title="Home" class="Home">
             <i class="fas fa-home"></i>
         </a>
     </header>
     <main>
         <section data-aos="fade-up" data-aos-duration="1000">
-            <h2>Fiction</h2>
-            <ul>
-                <li data-aos="fade-right" data-aos-delay="100">
-                    <img src="members/9781435172418.avif" alt="The Great Gatsby">
-                    <h3>The Great Gatsby by F. Scott Fitzgerald</h3>
-                    <p>A novel set in the Roaring Twenties that tells the story of the mysterious Jay Gatsby and his unrequited love for Daisy Buchanan.</p>
-                    <a href="downloads/great_gatsby.pdf" download>Download</a>
-                </li>
-                <li>
-                    <img src="members/81fcLJo+FNL.jpg" alt="1984">
-                    <h3>1984 by George Orwell</h3>
-                    <p>A dystopian novel that explores the dangers of totalitarianism and extreme political ideology.</p>
-                    <a href="downloads/1984.pdf" download>Download</a>
-                </li>
-            </ul>
-        </section>
-        <section data-aos="fade-up" data-aos-duration="1000">
-            <h2>Non-Fiction</h2>
-            <ul>
-                <li data-aos="fade-right" data-aos-delay="100">
-                    <img src="members/Sapiens-A-Brief-History-of-Humankind-by-Yuval-Noah-Harari-scaled.jpg" alt="Sapiens">
-                    <h3>Sapiens by Yuval Noah Harari</h3>
-                    <p>A brief history of humankind, exploring how Homo sapiens came to dominate the Earth.</p>
-                    <a href="downloads/sapiens.pdf" download>Download</a>
-                </li>
-                <li data-aos="fade-right" data-aos-delay="100">
-                    <img src="members/Educated-by-Tara-Westover-scaled-1.jpeg" alt="Educated">
-                    <h3>Educated by Tara Westover</h3>
-                    <p>A memoir about a woman who grows up in a strict and abusive household in rural Idaho but eventually escapes to learn about the wider world through education.</p>
-                    <a href="downloads/educated.pdf" download>Download</a>
-                </li>
+            <h2>Books</h2>
+            <ul id="books-container">
+                <!-- Books will be loaded here -->
             </ul>
         </section>
     </main>
@@ -200,5 +172,6 @@
             offset: 100
         });
     </script>
+    <script src="js/fetch-books.js"></script>
 </body>
 </html>
